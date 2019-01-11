@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
+const { StatsWriterPlugin } = require('webpack-stats-plugin');
 
 module.exports = {
 	entry: path.resolve(__dirname, 'src'),
@@ -30,11 +31,14 @@ module.exports = {
 			}
 		]),
 		new WebpackMd5Hash(),
-		new ExtractTextPlugin('[name].[contenthash].css')
+		new ExtractTextPlugin('[name].[contenthash].css'),
+		new StatsWriterPlugin({
+			filename: 'stats.json' // Default
+		})
 	],
 	module: {
 		loaders: [
-			{ 
+			{
 				test: /\.js$/,
 				use: {
 					loader: 'babel-loader'
@@ -51,11 +55,11 @@ module.exports = {
 						{
 							loader: 'postcss-loader',
 							options: {
-								plugins: function() {
-	                return [
-	                  require('autoprefixer')
-	                ];
-	              }
+								plugins: function () {
+									return [
+										require('autoprefixer')
+									];
+								}
 							}
 						}
 					],

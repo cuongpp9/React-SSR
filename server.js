@@ -23,13 +23,12 @@ if(process.env.NODE_ENV === 'development') {
 	}));
 	app.use(require('webpack-hot-middleware')(compiler));
 	app.use(express.static(path.resolve(__dirname, 'src')));
+	app.use(express.static(path.resolve(__dirname, 'public')));
 } else if(process.env.NODE_ENV === 'production') {
 	app.use(express.static(path.resolve(__dirname, 'dist')));
+	app.use(express.static(path.resolve(__dirname, 'public')));
 }
-
-const config = require('./webpack.config.prod');
-console.log('webpack.output', config.output);
-
+console.log("path.resolve(__dirname, 'public')", path.resolve(__dirname, 'public'))
 app.get('*', middleware);
 
 app.listen(3000, '0.0.0.0', (err) => {

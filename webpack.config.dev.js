@@ -1,7 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
 
+
 module.exports = {
+	devtool: 'inline-source-map',
 	entry: [
 		'webpack-hot-middleware/client',
 		path.resolve(__dirname, 'src')
@@ -19,7 +21,7 @@ module.exports = {
 				NODE_ENV: JSON.stringify('development'),
 				WEBPACK: true
 			}
-		})
+		}),
 	],
 	module: {
 		loaders: [

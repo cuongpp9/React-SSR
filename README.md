@@ -10,7 +10,7 @@ npm run build
 
 ### Host the app from a server (app must have been built)
 ```sh
-npm run serve
+npm run server
 ```
 
 ### Switch versions (ex. v1.0.0)
