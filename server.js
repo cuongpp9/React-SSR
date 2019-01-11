@@ -2,6 +2,7 @@ import path from 'path';
 import express from 'express';
 import webpack from 'webpack';
 import middleware from './src/middleware';
+import open from 'open';
 
 const app = express();
 
@@ -28,13 +29,14 @@ if(process.env.NODE_ENV === 'development') {
 	app.use(express.static(path.resolve(__dirname, 'dist')));
 	app.use(express.static(path.resolve(__dirname, 'public')));
 }
-console.log("path.resolve(__dirname, 'public')", path.resolve(__dirname, 'public'))
+
 app.get('*', middleware);
 
 app.listen(3000, '0.0.0.0', (err) => {
 	if(err) {
 		console.error(err);
 	} else {
-		console.info('Listening at http://localhost:3000');	
+		console.info('Listening at http://localhost:3000');
+		open('http://localhost:3000');
 	}
 });

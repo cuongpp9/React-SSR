@@ -4,8 +4,8 @@ import { createBrowserHistory } from 'history';
 import { ConnectedRouter, routerMiddleware } from 'react-router-redux';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import App from './components/app';
-import reducers from './reducers';
+import App from './Layouts/app';
+import reducers from './Redux/reducers';
 
 const history = createBrowserHistory();
 const store = createStore(reducers, applyMiddleware(routerMiddleware(history)));
@@ -20,7 +20,7 @@ render(
 
 if(process.env.NODE_ENV === 'development' && module.hot) {
   module.hot.accept();
-  module.hot.accept('./reducers', () => {
-    store.replaceReducer(require('./reducers').default);
+  module.hot.accept('./Redux/reducers', () => {
+    store.replaceReducer(require('./Redux/reducers').default);
   });
 }

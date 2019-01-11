@@ -3,12 +3,11 @@ import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import App from './components/app';
-import reducers from './reducers';
+import App from './Layouts/app';
+import reducers from './Redux/reducers';
 import * as fs from 'fs';
 
 const stats = JSON.parse(fs.readFileSync('./dist/stats.json', 'utf8')) || '';
-console.log('stats', stats.assetsByChunkName);
 
 export default (req, res) => {
 	if(process.env.NODE_ENV === 'development') {
@@ -16,7 +15,8 @@ export default (req, res) => {
 			<!doctype html>
 			<html>
 				<head>
-					<title>My Universal App</title>
+					<title>My App</title>
+					<link rel="shortcut icon" href="ico.png">
 					<link rel='stylesheet' href='bundle.css'>
 					<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 					<link rel="stylesheet" href="/bootstrap/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -35,7 +35,8 @@ export default (req, res) => {
 			<!doctype html>
 			<html>
 				<head>
-					<title>My Universal App</title>
+					<title>My App</title>
+					<link rel="shortcut icon" type="image/x-icon" href="ico.png">
 					<link rel='stylesheet' href='${stats.assetsByChunkName.main[1]}'>
 					<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 					<link rel="stylesheet" href="/bootstrap/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
