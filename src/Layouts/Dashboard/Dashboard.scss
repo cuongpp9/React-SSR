@@ -1,0 +1,214 @@
+.dashboard-layout{
+    .control{
+        width: 16%;
+        height: 100vh;
+        float: left;
+        border: 1px solid #ddd;    
+    }
+    .sideNav{
+        display: none;
+    }
+    .profile{
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 10%;
+        display: flex;
+        border: 1px solid #ddd;
+    }
+    .profile-icon{
+        width: 33%;
+        height: 13vh;
+        padding-top: 25px;
+        padding-left: 8px;
+        
+    }
+    .icon{
+        width: 50px;
+        height: 50px;
+    }
+    .user-info{
+        width: 77%;
+        height: 13vh;
+        padding-top: 20px;
+        padding-left: 10px;            
+    }
+    .user-name-content{
+        font-weight: bold;
+        font-family: serif;
+        font-size: 15px;
+        line-height: 15%;
+    }
+    .mail-content{
+        font-size: 10px;
+        line-height: 10%;
+    }
+    .role-content{
+        font-size: 10px;
+        line-height: 10%;
+    }
+
+    .menu {
+        height: 67%;
+    }
+    .menu-control{
+        overflow-y: auto;
+        height: 550px;
+    }
+    .dashboard-content{
+        width: 84%;
+        height: 100vh;
+        float: right;
+    }
+    .dashboard-support{
+        background-color: #56CCB1;
+        width: 100%;
+        height: 8vh;
+        padding-left: 10px;
+        border: 1px solid #ddd;
+    }
+    .title{
+        width: 20%;
+        float: left;
+        padding-left: 20px;
+        display: flex;
+    }
+    h5{
+        text-transform: uppercase;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .support-content{
+        width: 80%;
+        height: 100%;
+        float: right;
+    }
+    .support-control{
+        width: 50%;
+        float: right;
+        display:flex;
+    }
+    .search{
+        padding: 5px;
+        display:flex;
+    }
+    .search-icon{
+        padding-top: 5px;
+        padding-right: 5px;
+    }
+    .icon{
+        width: 30px;
+        height: 30px;
+    }
+    h6{
+        font-size: 18px;
+        font-family: Calibri;
+    }
+    .delivery{
+        padding: 5px;
+        display:flex;
+    }
+
+    .dashboard-body{
+        width: 100%;
+        height: 84vh;
+    }
+    .dashboard-footer{
+        background-color: #56CCB1;
+        width: 100%;
+        height: 8vh;
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
+    .copy-right-content{
+        color: white;
+        width: 50%;
+        height: 30px;
+        font-size: 15px;
+        float: left;
+        padding-left: 20px;
+    }
+    .contact{
+        color: white;
+        width: 15%;
+        height: 30px;
+        font-size: 15px;
+        float: right;
+        padding-left: 20px;
+    }
+    
+}
+ 
+
+
+/*-------------%%%%$$$$$$--- Responsive---------------------------- */
+
+@media only screen and (max-width: 600px) {
+    .dashboard-layout{
+        .sideNav{
+            display: table-row;
+            width: 100px;
+        }
+        .bntSideNav{
+            width: 55%;
+            height: 10%;
+            background: #56CCB1;
+
+            .material-icons{
+                padding: 9%;
+            }
+        }
+        
+        .onDisplay{
+            display: none;
+            width: 10px;
+            height: 10px;
+        }
+        .profile{
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 10%;
+            display: flex;
+            border: 1px solid #ddd;
+        }
+        .menu{
+            height: 90vh;
+        }
+        .menu-control{
+            overflow-y: auto;
+            height: 90vh;
+        }
+        .dashboard-support{
+            background-color: #56CCB1;
+            width: 100%;
+            height: 50px;
+            padding-left: 10px;
+            padding-top: 50px;
+            border: 0px solid #ddd;
+        }
+        .title{
+            margin-top: -46px;
+            width: 20%;
+            float: left;
+            padding-left: 0px;
+            display: flex;       
+        }
+        h5{
+            text-transform: uppercase;
+            font-family: Calibri;
+            font-size: 120%;
+            padding-left: 100px;
+        }   
+        .search-icon{
+            padding-top: 0px;
+            padding-right: 0px;
+        }
+        .delivery{
+            padding: 5px;
+            display:flex;
+        }
+
+        .dashboard-footer{
+            display: none;
+        }
+    }   
+    
+  }

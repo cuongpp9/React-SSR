@@ -1,0 +1,117 @@
+/*---------------- right Layout Login CSS---------- */
+.login-form{
+    float: right;
+    width: 50%;
+    height: 100vh;
+    .get-out {
+        display: table;
+        position: absolute;
+        height: 100%;
+        width: 50%;
+    }
+    .right-mid {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .container-login{
+        height: 90%;
+        width: 100%;
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 6%;
+        padding-bottom: 9%;
+    }
+    .card-container{
+        height: 100%;
+        padding: 10%;
+        border: 1px solid #ddd;
+    }
+    .title-login {
+        text-align: center;
+    }
+    h3{
+        color: #26A69A;
+    }
+    .waves-effect{
+        width: 140px;
+    }
+    a{
+        margin-right: 20px;
+        transition: color .3s ease;
+        text-transform: uppercase;
+    }
+    .text-lighten {
+        color: #4A4A4A !important;
+        font-family: Roboto;
+        font-size: 18px;
+        letter-spacing: 0.64px;
+        line-height: 35px;
+    }               
+}
+
+/*-------------%%%%$$$$$$--- Responsive---------------------------- */
+
+@media only screen and (max-width: 600px) {
+    .login-layout {
+        .login-form{
+            width: 90%;
+            height: 80vh;
+        }
+
+        .get-out {
+            height: 80%;
+            width: 90%;
+        }
+        .right-mid {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .container-login{
+            height: 90%;
+            width: 100%;
+            padding-left: 0%;
+            padding-right: 5%;
+            padding-top: 0%;
+            padding-bottom: 0%;
+        }
+        .card-container{
+            height: 100%;
+            padding: 0%;
+            padding-right: 10%;
+            border: 0px solid #ddd;
+        }
+        .title-login {
+            text-align: center;            
+        }
+        h3{
+            color: #26A69A;
+            font-size: 0px;
+        }       
+        .waves-effect{
+            width: 100%;
+        }
+        .right{
+            width: 100%;
+            padding-left: 10%;
+            padding-top: 5%;
+            text-align: center;
+        }
+        a{
+            margin-right: 0px;
+            transition: color .3s ease;
+            text-transform: uppercase;
+        }
+        .text-lighten {
+            color: #4A4A4A !important;
+            font-family: Roboto;
+            font-size: 18px;
+            letter-spacing: 0.64px;
+            line-height: 35px;
+        }
+        .copy-right{
+            position: absolute;
+            width: 100%;
+            color: white;
+        }
+    }
+}

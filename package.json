@@ -34,8 +34,8 @@
     "node-sass": "^4.5.3",
     "open": "0.0.5",
     "postcss-loader": "^2.0.6",
-    "react": "^15.2.1",
-    "react-dom": "^15.2.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.2",
     "react-router-redux": "^5.0.0-alpha.6",
@@ -50,6 +50,7 @@
   },
   "repository": {},
   "dependencies": {
+    "react-materialize": "^2.6.0",
     "webpack-md5-hash": "0.0.6"
   }
 }

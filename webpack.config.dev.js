@@ -30,7 +30,7 @@ module.exports = {
 				use: {
 					loader: 'babel-loader',
 					query: {
-						presets: [ 'react-hmre' ]
+						presets: [ 'es2015', 'react-hmre' ]
 					}
 				},
 				include: path.resolve(__dirname, 'src'),

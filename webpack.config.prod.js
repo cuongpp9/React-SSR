@@ -33,7 +33,7 @@ module.exports = {
 		new WebpackMd5Hash(),
 		new ExtractTextPlugin('[name].[contenthash].css'),
 		new StatsWriterPlugin({
-			filename: 'stats.json' // Default
+			filename: 'chunkContent.json' // Default
 		})
 	],
 	module: {

@@ -1,0 +1,23 @@
+.collapsible{
+    font-size: 12px;
+    height: 90vh;
+
+    .menu-deliver{
+        padding-left: 50px;
+    }
+    .menu-transfers{
+        padding-left: 33px;
+    }
+
+    .menu-Patients{
+        padding-left: 60px;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .collapsible{
+        color: black;
+    }
+}
+

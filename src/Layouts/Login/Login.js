@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { toggleTodo } from '../../redux/actions/todos';
-import Header from '../header';
-if (process.env.WEBPACK) require('./index.scss');
-import LoginForm from './components/login/index';
+import './Login.scss';
+import LoginForm from './components/LoginForm';
 
-console.log("process.env.WEBPACK", process.env.WEBPACK)
-const Home = ({ dispatch, todos }) => (
-	<div className="login-layout">
+class Login extends Component {
+  render() {
+    return (
+      <div className="login-layout">
         {/* Left Login layout */}
         <div className="left-layout">
           <div className="get-out">
@@ -28,9 +25,8 @@ const Home = ({ dispatch, todos }) => (
           <h5 className="center-align">© 2017 Lindenwood Health, Inc</h5>
         </div>
       </div>
-);
+    );
+  }
+}
 
-export default connect((state) => {
-	const { todos } = state;
-	return { todos };
-})(Home);
+export default Login;
