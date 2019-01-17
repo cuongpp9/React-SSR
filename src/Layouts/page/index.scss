@@ -1,7 +1,14 @@
 $color: red;
 
 .page {
-	h1 {
-		color: $color;
-	}
+    display: flex;
+    flex-direction: row ;
+    height: 100vh;
+    min-height: 100%;
+    .test1{
+        background-color: red;
+    }
+    .test2{
+        background-color: blue;
+    }
 }

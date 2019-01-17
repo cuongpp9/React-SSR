@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Dashboard.scss';
+if (process.env.WEBPACK) require('./Dashboard.scss');
 import { SideNavItem, SideNav, Button } from 'react-materialize';
 import CollapsibleMenu from './components/CollapsibleMenu';
 class Dashboard extends Component {
@@ -8,20 +8,20 @@ class Dashboard extends Component {
             <div className="dashboard-layout">
                 <div className="control">
                     <div className="sideNav">
-                        <SideNav
+                        {/* <SideNav
                             trigger={<Button className="bntSideNav">
                                 <i className="material-icons">menu</i></Button>}
                             options={{ closeOnClick: false }}>
                             <SideNavItem>
                                 <CollapsibleMenu/>
                             </SideNavItem>
-                        </SideNav>
+                        </SideNav> */}
                     </div>
                     <div className="onDisplay">
                         <div className="profile">
                             <div className="profile-icon">
                                 <div className="iconMedly">
-                                    <img className="icon" alt="iconMedly" src="/assets/icon_title.png" />
+                                    <img className="icon" alt="iconMedly" src="/assets/avatar.jpg" />
                                 </div>
                             </div>
                             <div className="user-info">

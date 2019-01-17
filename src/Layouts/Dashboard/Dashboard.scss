@@ -9,7 +9,7 @@
         display: none;
     }
     .profile{
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(202, 202, 202);
         width: 100%;
         height: 10%;
         display: flex;
@@ -18,8 +18,8 @@
     .profile-icon{
         width: 33%;
         height: 13vh;
-        padding-top: 25px;
-        padding-left: 8px;
+        margin-top: 15px;
+        margin-left: 5px;
         
     }
     .icon{
@@ -60,7 +60,7 @@
         float: right;
     }
     .dashboard-support{
-        background-color: #56CCB1;
+        background-color: rgba(105, 105, 105, 0.9);
         width: 100%;
         height: 8vh;
         padding-left: 10px;
@@ -95,8 +95,9 @@
         padding-right: 5px;
     }
     .icon{
-        width: 30px;
-        height: 30px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
     }
     h6{
         font-size: 18px;
@@ -112,7 +113,7 @@
         height: 84vh;
     }
     .dashboard-footer{
-        background-color: #56CCB1;
+        background-color: rgba(105, 105, 105, 0.9);
         width: 100%;
         height: 8vh;
         border: 1px solid #ddd;
@@ -137,7 +138,6 @@
     
 }
  
-
 
 /*-------------%%%%$$$$$$--- Responsive---------------------------- */
 
@@ -177,7 +177,7 @@
             height: 90vh;
         }
         .dashboard-support{
-            background-color: #56CCB1;
+            background-color: rgb(105, 105, 105);
             width: 100%;
             height: 50px;
             padding-left: 10px;

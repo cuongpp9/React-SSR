@@ -6,7 +6,7 @@ class CollapsibleBody extends Component {
         return (
             <div className="collapsible-body">
                 <div className="collapsible-header">
-                    <i className="material-icons">{this.props.nameIcon}</i>
+                    {/* <i className="material-icons">{this.props.nameIcon}</i> */}
                     {this.props.nameItem}
                 </div>
             </div>
